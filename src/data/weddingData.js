@@ -128,7 +128,7 @@ const weddingData = {
     caption: "The Bride & The Groom",
   },
   family: {
-    withLove: "With Love From",
+    withLove: "With love & blessings from",
     godaraTitle: "The Godara Family",
     godara: [
       "Surender Godara",
