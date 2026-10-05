@@ -25,7 +25,8 @@ const weddingData = {
     "प्रथम निमन्त्रण आपको, पूर्ण करियो काज ॥",
   ],
   invitationTitle: "Wedding Invitation",
-  quote: "Two hearts, one beautiful journey,\nand a lifetime of memories to begin.",
+  quote:
+    "Two hearts, one beautiful journey,\nand a lifetime of memories to begin.",
   host: {
     name: "Sh. Jessa Ram Godara",
     line: "cordially invites you to the wedding of his loving grandson",
@@ -55,8 +56,8 @@ const weddingData = {
     startOffset: 0,
     daysInMonth: 30,
     marks: {
-      8: { type: "haldi", label: "Haldi", caption: "8 November" },
-      13: { type: "wedding", label: "Wedding", caption: "13 November" },
+      12: { type: "wedding", label: "Wedding", caption: "12 November" },
+      13: { type: "reception", label: "Reception", caption: "13 November" },
     },
   },
   celebrationsTitle: "Celebrations",
@@ -77,16 +78,16 @@ const weddingData = {
     {
       weekday: "Thursday",
       date: "12 November 2026",
-      title: "Barat Departure",
-      time: "5.15 A.M.",
+      title: "Wedding",
+      time: "6.15 P.M.",
+      accent: "wedding",
     },
     {
       weekday: "Friday",
       date: "13 November 2026",
-      title: "Wedding",
+      title: "Dinner & Reception",
       time: "6.15 P.M.",
-      note: "Dinner",
-      accent: "wedding",
+      accent: "reception",
     },
   ],
   venue: {
@@ -97,20 +98,20 @@ const weddingData = {
       "https://www.google.com/maps/search/?api=1&query=Sarwarpur%2C%20Fatehabad%2C%20Haryana",
   },
   calendarEvent: {
-    title: "Anil & Bhavna — Wedding",
+    title: "Anil & Bhavna — Dinner & Reception",
     heading: "Anil & Bhavna",
-    ceremony: "Wedding Ceremony",
+    ceremony: "Dinner & Reception",
     dateLabel: "13 November 2026",
     place: "Sarwarpur",
     region: "Fatehabad, Haryana",
     location: "Sarwarpur, Fatehabad, Haryana",
-    uid: "anil-bhavna-wedding-20261113@invitation",
+    uid: "anil-bhavna-reception-20261113@invitation",
     startDate: "20261113",
     endDate: "20261114",
     description: [
       "Anil Kumar weds Bhavna",
       "Friday, 13 November 2026",
-      "Wedding dinner at 6.15 P.M.",
+      "Dinner & Reception at 6.15 P.M.",
       "Venue: Sarwarpur, Fatehabad, Haryana",
     ].join("\n"),
   },
@@ -164,6 +165,6 @@ const weddingData = {
   closing: {
     line: "Together with our families,\nwe look forward to celebrating\nthis beautiful day with you.",
   },
-}
+};
 
-export default weddingData
+export default weddingData;

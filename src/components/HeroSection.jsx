@@ -99,9 +99,9 @@ export default function HeroSection({ revealed }) {
 
           <div className="mt-auto w-full px-4 pb-[calc(6.75rem+env(safe-area-inset-bottom))] text-center sm:px-6 lg:pb-8">
             <ReceptionCountdown />
-            <p className="mx-auto mt-4 max-w-full font-display text-[clamp(1rem,4.8vw,1.7rem)] tracking-[0.12em] text-gold-light drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)] sm:tracking-[0.16em] lg:text-[clamp(1.15rem,11cqi,1.8rem)] lg:tracking-[0.14em]">
+            <p className="mx-auto mt-7 max-w-full font-display text-[clamp(1.35rem,5.8vw,2.15rem)] font-semibold tracking-[0.14em] text-gold-light drop-shadow-[0_3px_10px_rgba(0,0,0,0.65)] sm:tracking-[0.16em] lg:mt-4 lg:text-[clamp(1.15rem,11cqi,1.8rem)] lg:font-normal lg:tracking-[0.14em] lg:drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
               {weddingData.couple.groom.toUpperCase()}
-              <span className="mx-2 inline-block text-blush">♥</span>
+              <span className="mx-2.5 inline-block text-blush lg:mx-2">♥</span>
               {weddingData.couple.bride.toUpperCase()}
             </p>
           </div>

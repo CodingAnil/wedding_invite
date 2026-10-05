@@ -12,7 +12,7 @@ export default function WeddingDateButton() {
         onClick={() => setOpen(true)}
         aria-haspopup="dialog"
         aria-expanded={open}
-        aria-label="13 November 2026, wedding ceremony"
+        aria-label="13 November 2026, dinner and reception"
         className="fixed right-[max(0.75rem,env(safe-area-inset-right))] bottom-[max(0.75rem,env(safe-area-inset-bottom))] z-40 flex h-16 w-16 flex-col items-center justify-center rounded-full border border-gold text-gold-bright shadow-[0_10px_24px_rgba(90,64,53,0.28)] lg:right-6 lg:bottom-6 lg:h-20 lg:w-20"
         style={{ background: "radial-gradient(circle at 35% 30%, #7a1f2b 0%, #641c25 72%)" }}
       >
