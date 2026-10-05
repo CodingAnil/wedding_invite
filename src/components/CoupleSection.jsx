@@ -1,9 +1,9 @@
-import { motion, useReducedMotion } from "framer-motion"
-import weddingData from "../data/weddingData"
-import { Reveal } from "./Ornaments"
+import { motion, useReducedMotion } from "framer-motion";
+import weddingData from "../data/weddingData";
+import { Reveal } from "./Ornaments";
 
 export default function CoupleSection() {
-  const reduce = useReducedMotion()
+  const reduce = useReducedMotion();
 
   return (
     <section className="bg-ivory px-5 py-16 sm:px-8 sm:py-24">
@@ -36,5 +36,5 @@ export default function CoupleSection() {
         </p>
       </Reveal>
     </section>
-  )
+  );
 }

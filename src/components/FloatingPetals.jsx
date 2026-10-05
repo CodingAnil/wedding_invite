@@ -1,39 +1,111 @@
-import { motion, useReducedMotion } from "framer-motion"
+import { motion, useReducedMotion } from "framer-motion";
 
 const BURST = [
-  { left: "10%", delay: 0.05, duration: 3.1, size: 13, sway: 26, color: "#f6ddd4", spin: 160 },
-  { left: "24%", delay: 0.2, duration: 3.4, size: 9, sway: -18, color: "#e3b52f", spin: -140 },
-  { left: "42%", delay: 0.1, duration: 2.8, size: 12, sway: 16, color: "#d4a62a", spin: 180 },
-  { left: "58%", delay: 0.28, duration: 3.2, size: 8, sway: -22, color: "#f6ddd4", spin: 120 },
-  { left: "72%", delay: 0.12, duration: 3.5, size: 14, sway: 20, color: "#7a1f2b", spin: -160 },
-  { left: "86%", delay: 0.32, duration: 3, size: 10, sway: -14, color: "#e3b52f", spin: 150 },
-  { left: "33%", delay: 0.4, duration: 3.3, size: 7, sway: 12, color: "#d4a62a", spin: -100 },
-  { left: "64%", delay: 0.18, duration: 2.9, size: 11, sway: -20, color: "#641c25", spin: 130 },
-]
+  {
+    left: "10%",
+    delay: 0.05,
+    duration: 3.1,
+    size: 13,
+    sway: 26,
+    color: "#f6ddd4",
+    spin: 160,
+  },
+  {
+    left: "24%",
+    delay: 0.2,
+    duration: 3.4,
+    size: 9,
+    sway: -18,
+    color: "#e3b52f",
+    spin: -140,
+  },
+  {
+    left: "42%",
+    delay: 0.1,
+    duration: 2.8,
+    size: 12,
+    sway: 16,
+    color: "#d4a62a",
+    spin: 180,
+  },
+  {
+    left: "58%",
+    delay: 0.28,
+    duration: 3.2,
+    size: 8,
+    sway: -22,
+    color: "#f6ddd4",
+    spin: 120,
+  },
+  {
+    left: "72%",
+    delay: 0.12,
+    duration: 3.5,
+    size: 14,
+    sway: 20,
+    color: "#7a1f2b",
+    spin: -160,
+  },
+  {
+    left: "86%",
+    delay: 0.32,
+    duration: 3,
+    size: 10,
+    sway: -14,
+    color: "#e3b52f",
+    spin: 150,
+  },
+  {
+    left: "33%",
+    delay: 0.4,
+    duration: 3.3,
+    size: 7,
+    sway: 12,
+    color: "#d4a62a",
+    spin: -100,
+  },
+  {
+    left: "64%",
+    delay: 0.18,
+    duration: 2.9,
+    size: 11,
+    sway: -20,
+    color: "#641c25",
+    spin: 130,
+  },
+];
 
 const DRIFT = [
   { left: "14%", delay: 0.1, size: 11, sway: 14, color: "#f6ddd4" },
   { left: "48%", delay: 0.35, size: 8, sway: -10, color: "#e3b52f" },
   { left: "78%", delay: 0.2, size: 10, sway: 12, color: "#d4a62a" },
-]
+];
 
 function PetalShape({ color, size }) {
   return (
-    <svg width={size} height={size * 1.45} viewBox="0 0 20 30" aria-hidden="true">
+    <svg
+      width={size}
+      height={size * 1.45}
+      viewBox="0 0 20 30"
+      aria-hidden="true"
+    >
       <path
         d="M10 1.5c3.8 5.2 7.2 10.2 7.2 15.2C17.2 24 14 28.2 10 28.2S2.8 24 2.8 16.7C2.8 11.7 6.2 6.7 10 1.5z"
         fill={color}
       />
     </svg>
-  )
+  );
 }
 
 export default function FloatingPetals({ active }) {
-  const reduce = useReducedMotion()
-  if (!active || reduce) return null
+  const reduce = useReducedMotion();
+  if (!active || reduce) return null;
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-30 overflow-hidden" aria-hidden="true">
+    <div
+      className="pointer-events-none fixed inset-0 z-30 overflow-hidden"
+      aria-hidden="true"
+    >
       {BURST.map((petal) => (
         <motion.span
           key={`${petal.left}-${petal.delay}`}
@@ -46,21 +118,28 @@ export default function FloatingPetals({ active }) {
             rotate: [0, petal.spin * 0.45, petal.spin],
             opacity: [0, 0.75, 0],
           }}
-          transition={{ duration: petal.duration, delay: petal.delay, ease: "easeIn" }}
+          transition={{
+            duration: petal.duration,
+            delay: petal.delay,
+            ease: "easeIn",
+          }}
         >
           <PetalShape color={petal.color} size={petal.size} />
         </motion.span>
       ))}
     </div>
-  )
+  );
 }
 
 export function PetalDrift() {
-  const reduce = useReducedMotion()
-  if (reduce) return null
+  const reduce = useReducedMotion();
+  if (reduce) return null;
 
   return (
-    <div className="pointer-events-none absolute inset-x-0 top-0 h-36 overflow-hidden" aria-hidden="true">
+    <div
+      className="pointer-events-none absolute inset-x-0 top-0 h-36 overflow-hidden"
+      aria-hidden="true"
+    >
       {DRIFT.map((petal) => (
         <motion.span
           key={petal.left}
@@ -80,5 +159,5 @@ export function PetalDrift() {
         </motion.span>
       ))}
     </div>
-  )
+  );
 }
