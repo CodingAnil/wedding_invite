@@ -5,11 +5,15 @@ const weddingData = {
     bride: "Bhavna",
     monogram: "/images/monogram.png",
     monogramAlt: "Anil and Bhavna monogram",
-    portrait: "/images/Wedding_couple_side.jpeg",
+    portrait: "/images/Wedding_couple_side.png",
     portraitAlt: "Anil and Bhavna in wedding attire",
     heroSlides: [
       {
-        src: "/images/Wedding_couple_side.jpeg",
+        src: "/images/Wedding_couple_pre.png",
+        alt: "Anil and Bhavna pre-wedding portrait",
+      },
+      {
+        src: "/images/Wedding_couple_side.png",
         alt: "Anil and Bhavna side portrait in wedding attire",
       },
       {
@@ -17,7 +21,7 @@ const weddingData = {
         alt: "Anil and Bhavna front portrait in wedding attire",
       },
     ],
-    footerPortrait: "/images/Wedding_couple_pre.jpeg",
+    footerPortrait: "/images/Wedding_couple_pre.png",
   },
   blessing: "॥ श्री गणेशाय नमः ॥",
   doha: [
